@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwsvlk5l31wqe"]
+
+[ext_resource type="Texture2D" uid="uid://ba4jlf7x5hvro" path="res://Grafika/pixil-frame-0_6.png" id="1_nvr06"]
+[ext_resource type="Script" path="res://projectile.gd" id="1_xdh5q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0sq4"]
+size = Vector2(84, 168)
+
+[node name="projectile" type="Area2D"]
+script = ExtResource("1_xdh5q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("1_nvr06")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.12, 0.12)
+shape = SubResource("RectangleShape2D_p0sq4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

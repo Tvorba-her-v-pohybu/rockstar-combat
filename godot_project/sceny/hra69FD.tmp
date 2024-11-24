@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmsgasc8d0duc"]
+
+[ext_resource type="Texture2D" uid="uid://dhpk0rsmdllne" path="res://Grafika/pixil-frame-0_3.png" id="2_26kop"]
+[ext_resource type="Script" path="res://programy/program_postava.gd" id="2_b4c10"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qtqgs"]
+radius = 42.0
+height = 117.11
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(562, 311)
+script = ExtResource("2_b4c10")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-43.0897, -111.78)
+scale = Vector2(0.102601, 0.102601)
+texture = ExtResource("2_26kop")
+centered = false
+offset = Vector2(-350, -1074.26)
+region_enabled = true
+region_rect = Rect2(3456.97, 970.888, 692.933, 1453.14)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-43.0897, -126.845)
+shape = SubResource("CapsuleShape2D_qtqgs")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(-43.0897, -111.78)

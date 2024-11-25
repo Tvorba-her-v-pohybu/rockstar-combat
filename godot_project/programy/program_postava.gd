@@ -31,6 +31,7 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
+# Tahle funkce provede strileni
 func _shoot():
 	var projectile := projectile_scene.instantiate()
 	projectile.global_position = $Node2D.global_position

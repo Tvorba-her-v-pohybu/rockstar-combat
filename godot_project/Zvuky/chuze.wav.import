@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://jkl3dir84ca"
-path="res://.godot/imported/chuze.wav-d6b87bc2fc8377b0ac9d77382d93d0f4.sample"
+path="res://.godot/imported/chuze.wav-93c748e5ca8d87424d50dad4a02f0048.sample"
 
 [deps]
 
-source_file="res://Grafika/chuze.wav"
-dest_files=["res://.godot/imported/chuze.wav-d6b87bc2fc8377b0ac9d77382d93d0f4.sample"]
+source_file="res://Zvuky/chuze.wav"
+dest_files=["res://.godot/imported/chuze.wav-93c748e5ca8d87424d50dad4a02f0048.sample"]
 
 [params]
 

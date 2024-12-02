@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b4cfqsn5md0le"
-path="res://.godot/imported/vístřel.wav-20c9b91355ffb9ae2fe4ba1d5cf097a1.sample"
+path="res://.godot/imported/vístřel.wav-0dfd77dae2644b4fbc0b0b970a9173ee.sample"
 
 [deps]
 
-source_file="res://Grafika/vístřel.wav"
-dest_files=["res://.godot/imported/vístřel.wav-20c9b91355ffb9ae2fe4ba1d5cf097a1.sample"]
+source_file="res://Zvuky/vístřel.wav"
+dest_files=["res://.godot/imported/vístřel.wav-0dfd77dae2644b4fbc0b0b970a9173ee.sample"]
 
 [params]
 

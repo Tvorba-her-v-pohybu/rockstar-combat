@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cqvaavmls8lwy"
+path="res://.godot/imported/SCAR 17 - Эта пушка решает!   Brandon Herrera на Русском Языке..mp3-e0442eb83bdea92e2aa0a0d6ae5ca83c.mp3str"
+
+[deps]
+
+source_file="res://Zvuky/SCAR 17 - Эта пушка решает!   Brandon Herrera на Русском Языке..mp3"
+dest_files=["res://.godot/imported/SCAR 17 - Эта пушка решает!   Brandon Herrera на Русском Языке..mp3-e0442eb83bdea92e2aa0a0d6ae5ca83c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

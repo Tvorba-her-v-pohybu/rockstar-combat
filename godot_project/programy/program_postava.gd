@@ -46,7 +46,7 @@ func _physics_process(delta: float) -> void:
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-		if not $AudioStreamPlayer.playing:
+		if not $AudioStreamPlayer.playing && not Input.is_action_pressed("Shift_left"):
 			$AudioStreamPlayer.play()
 	else:
 		$AudioStreamPlayer.stop()

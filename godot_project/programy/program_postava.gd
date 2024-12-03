@@ -7,6 +7,7 @@ extends CharacterBody2D
 @export var ammo := tricet
 @export var reloading := false
 @export var strelba := false
+@export var hp := 100
 
 var projectile_scene := preload("res://projectile.tscn")
 
@@ -56,6 +57,9 @@ func _physics_process(delta: float) -> void:
 
 func show_ammo():
 	%AmmoLabel.text = str(ammo) + " / " + str(tricet)
+	
+func show_hp():
+	%HPLabel.text = "HP " + str(hp)
 # Tahle funkce provede strileni
 func _shoot():
 	var projectile := projectile_scene.instantiate()

@@ -13,6 +13,7 @@ var projectile_scene := preload("res://projectile.tscn")
 
 func _ready() -> void:
 	show_ammo()
+	show_hp()
 
 func _physics_process(delta: float) -> void:
 	look_at(get_global_mouse_position())
@@ -44,10 +45,13 @@ func _physics_process(delta: float) -> void:
 		ammo = tricet
 		show_ammo()
 		reloading = false
-
+	if Input.is_action_just_pressed("Shift_left"):
+		speed = 300.0
+	if Input.is_action_just_released("Shift_left"):
+		speed = 200.0
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-		if not $AudioStreamPlayer.playing && not Input.is_action_pressed("Shift_left"):
+		if not $AudioStreamPlayer.playing:
 			$AudioStreamPlayer.play()
 	else:
 		$AudioStreamPlayer.stop()
@@ -59,7 +63,7 @@ func show_ammo():
 	%AmmoLabel.text = str(ammo) + " / " + str(tricet)
 	
 func show_hp():
-	%HPLabel.text = "HP " + str(hp)
+	%HPLabel.text = str(hp)
 # Tahle funkce provede strileni
 func _shoot():
 	var projectile := projectile_scene.instantiate()

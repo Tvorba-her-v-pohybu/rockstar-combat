@@ -207,8 +207,6 @@ stream = ExtResource("12_5wqin")
 stream = ExtResource("13_hxask")
 volume_db = -4.685
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
 [node name="projectile" parent="." instance=ExtResource("7_hyr0j")]
 position = Vector2(-1651, 698)
 scale = Vector2(3.975, 3.975)

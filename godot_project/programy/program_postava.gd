@@ -9,7 +9,7 @@ extends CharacterBody2D
 @export var strelba := false
 @export var hp := 100
 
-var projectile_scene := preload("res://projectile.tscn")
+var projectile_scene := preload("res://sceny/projectile.tscn")
 
 func _ready() -> void:
 	show_ammo()
@@ -57,12 +57,16 @@ func _physics_process(delta: float) -> void:
 			$AudioStreamPlayer.play()
 	else:
 		$AudioStreamPlayer.stop()
+	if hp == 0:
+		hp = 100
+		show_hp()
+		$AudioStreamPlayer4.play()
 	
 	
 	move_and_slide()
 
 func show_ammo():
-	%AmmoLabel.text = str(ammo) + " / " + str(tricet)
+	%AmmoLabel.text = str(ammo) + " / " + str(tricet) + " "
 	
 func show_hp():
 	%HPLabel.text = str(hp)

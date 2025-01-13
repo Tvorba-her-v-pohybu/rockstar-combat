@@ -17,4 +17,5 @@ texture = ExtResource("1_nvr06")
 scale = Vector2(0.12, 0.12)
 shape = SubResource("RectangleShape2D_p0sq4")
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

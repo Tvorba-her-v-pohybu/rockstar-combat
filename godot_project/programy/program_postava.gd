@@ -33,7 +33,6 @@ func _physics_process(delta: float) -> void:
 		_shoot()
 		$AudioStreamPlayer2.play()
 		ammo = ammo - 1
-		hp = hp - 20
 		show_hp()
 		show_ammo()
 		await get_tree().create_timer(0.2).timeout

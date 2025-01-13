@@ -23,8 +23,8 @@ func _physics_process(delta: float) -> void:
 		
 	global_position += velocity
 
-func on_hit(demage):
-	HP = HP - demage
+func on_hit(damage):
+	HP = HP - damage
 	if HP == 0:
 		queue_free()
 		

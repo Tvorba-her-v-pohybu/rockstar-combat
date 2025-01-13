@@ -3,6 +3,7 @@ extends Area2D
 
 @export var SPEED = 2.0
 @export var ACCEL = 4.0
+@export var HP = 100
 
 @export var target : Node2D
 var velocity := Vector2(0, 0)
@@ -22,4 +23,8 @@ func _physics_process(delta: float) -> void:
 		
 	global_position += velocity
 
-	
+func on_hit(demage):
+	HP = HP - demage
+	if HP == 0:
+		queue_free()
+		

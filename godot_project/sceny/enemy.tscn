@@ -10,7 +10,7 @@ size = Vector2(84.1963, 71.9911)
 scale = Vector2(1.113, 1.113)
 script = ExtResource("1_2ks85")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["enemy"]]
 rotation = 1.5708
 scale = Vector2(1.113, 1.113)
 texture = ExtResource("2_vvh51")
@@ -23,3 +23,17 @@ scale = Vector2(1.113, 1.113)
 shape = SubResource("RectangleShape2D_hr7al")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="AmmoLabel" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.79695
+offset_top = -78.1671
+offset_right = 83.7969
+offset_bottom = -29.1671
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.023575, 0.85843, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "-10"

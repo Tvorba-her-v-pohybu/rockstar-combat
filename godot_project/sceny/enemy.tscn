@@ -34,6 +34,7 @@ scale = Vector2(1.113, 1.113)
 script = ExtResource("1_2ks85")
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["enemy"]]
+visible = false
 rotation = 1.5708
 scale = Vector2(1.113, 1.113)
 texture = ExtResource("2_vvh51")
@@ -47,7 +48,17 @@ shape = SubResource("RectangleShape2D_hr7al")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
-[node name="AmmoLabel" type="Label" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(14.3756, -6.28931)
+rotation = 1.5708
+scale = Vector2(1.13934, 1.13934)
+sprite_frames = SubResource("SpriteFrames_1ny0k")
+
+[node name="AttackTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="DemageTreckerLabel" type="Label" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -60,16 +71,6 @@ grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0.023575, 0.85843, 0, 1)
 theme_override_font_sizes/font_size = 35
 text = "-10"
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(14.3756, -6.28931)
-rotation = 1.5708
-scale = Vector2(1.13934, 1.13934)
-sprite_frames = SubResource("SpriteFrames_1ny0k")
-
-[node name="AttackTimer" type="Timer" parent="."]
-unique_name_in_owner = true
-one_shot = true
 
 [connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

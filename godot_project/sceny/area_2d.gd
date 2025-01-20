@@ -12,6 +12,9 @@ var velocity := Vector2(0, 0)
 
 @onready var navigation : NavigationAgent2D = $NavigationAgent2D
 
+func _ready() -> void:
+	$DemageTreckerLabel.text = ""
+
 func _physics_process(delta: float) -> void:
 	navigation.target_position = target.global_position
 
@@ -21,25 +24,31 @@ func _physics_process(delta: float) -> void:
 		
 	velocity = velocity.lerp(direction*SPEED, ACCEL*delta)
 		
-	look_at(next_pos)
+	$AnimatedSprite2D.look_at(next_pos)
+	$AnimatedSprite2D.rotate(PI/2)
+	$CollisionShape2D.look_at(next_pos)
+	$CollisionShape2D.rotate(PI/2)
+	
 		
 	global_position += velocity
 	
 	if GameManager.player:
 		var distance_from_player = (global_position - GameManager.player.global_position).length()
-		print("distance_from_player: ", distance_from_player)
 		
 		if distance_from_player < attack_distance and %AttackTimer.is_stopped():
 			%AttackTimer.start()
 		elif distance_from_player > attack_distance:
 			%AttackTimer.stop()
-			
+
 
 func on_hit(damage):
 	HP = HP - damage
-	if HP == 0:
+	if HP <= 0:
 		queue_free()
-		
+	else:
+		$DemageTreckerLabel.text = str(-damage)
+		await get_tree().create_timer(0.25).timeout
+		$DemageTreckerLabel.text = ""
 
 func _on_attack_timer_timeout() -> void:
 	$AnimatedSprite2D.play("attack")

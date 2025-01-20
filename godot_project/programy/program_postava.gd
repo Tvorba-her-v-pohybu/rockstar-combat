@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 
 @export var tricet := 30
@@ -12,6 +12,7 @@ extends CharacterBody2D
 var projectile_scene := preload("res://sceny/projectile.tscn")
 
 func _ready() -> void:
+	GameManager.player = self
 	show_ammo()
 	show_hp()
 
@@ -66,6 +67,12 @@ func _physics_process(delta: float) -> void:
 
 func show_ammo():
 	%AmmoLabel.text = str(ammo) + " / " + str(tricet) + " "
+	
+func on_hit(damage):
+	hp = hp - damage
+	show_hp()
+	#if hp == 0:
+	#	queue_free()
 	
 func show_hp():
 	%HPLabel.text = str(hp)

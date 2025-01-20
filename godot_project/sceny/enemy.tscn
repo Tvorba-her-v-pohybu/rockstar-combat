@@ -1,10 +1,33 @@
-[gd_scene load_steps=4 format=3 uid="uid://detja68fditrv"]
+[gd_scene load_steps=6 format=3 uid="uid://detja68fditrv"]
 
 [ext_resource type="Script" path="res://sceny/area_2d.gd" id="1_2ks85"]
 [ext_resource type="Texture2D" uid="uid://bwj85unr5g8dq" path="res://Grafika/animace/had1.png" id="2_vvh51"]
+[ext_resource type="Texture2D" uid="uid://b3na0pk6xrpo8" path="res://Grafika/animace/had2.png" id="3_l64q5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hr7al"]
 size = Vector2(84.1963, 71.9911)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ny0k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_l64q5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_l64q5")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vvh51")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="enemy" type="Area2D" groups=["enemy"]]
 scale = Vector2(1.113, 1.113)
@@ -37,3 +60,16 @@ grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0.023575, 0.85843, 0, 1)
 theme_override_font_sizes/font_size = 35
 text = "-10"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(14.3756, -6.28931)
+rotation = 1.5708
+scale = Vector2(1.13934, 1.13934)
+sprite_frames = SubResource("SpriteFrames_1ny0k")
+
+[node name="AttackTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

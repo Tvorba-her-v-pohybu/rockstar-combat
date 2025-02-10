@@ -71,8 +71,6 @@ func show_ammo():
 func on_hit(damage):
 	hp = hp - damage
 	show_hp()
-	#if hp == 0:
-	#	queue_free()
 	
 func show_hp():
 	%HPLabel.text = str(hp)

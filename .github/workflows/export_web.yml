@@ -5,26 +5,36 @@ on:
     branches:
       - main  # Change this if needed
 
+env:
+  GODOT_VERSION: 4.3
+  EXPORT_NAME: Rockstar # Change this to your game's name
+  PROJECT_PATH: godot_project/  # Set to "." if your `project.godot` is in the root directory
+  EXPORT_DIR: .
+
 jobs:
   export:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
+    container:
+      image: barichello/godot-ci:4.3
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Export Godot Project to HTML5
-        uses: firebelley/godot-ci@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          version: "4.3"  # Change this to match your Godot version
-          export_path: "web/index.html"
-          cache: true
-          relative_export_path: true
-          export_presets_path: "export_presets.cfg"
+          lfs: true
+      - name: Setup
+        run: |
+          mkdir -v -p ~/.local/share/godot/export_templates/
+          mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+      - name: Web Build
+        run: |
+          mkdir -v -p build/web
+          EXPORT_DIR="$(readlink -f build)"
+          cd $PROJECT_PATH
+          godot --headless --verbose --export-release "Web" "$EXPORT_DIR/web/index.html"
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to GitHub Pages 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/web
-          branch: gh-pages
+          branch: gh-pages # The branch the action should deploy to.
+          folder: web/ # The folder the action should deploy.

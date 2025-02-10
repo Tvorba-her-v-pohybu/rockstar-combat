@@ -1,0 +1,30 @@
+name: Export and Deploy Godot Project to Github Pages
+
+on:
+  push:
+    branches:
+      - main  # Change this if needed
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Export Godot Project to HTML5
+        uses: firebelley/godot-ci@v4
+        with:
+          version: "4.3"  # Change this to match your Godot version
+          export_path: "web/index.html"
+          cache: true
+          relative_export_path: true
+          export_presets_path: "export_presets.cfg"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web
+          branch: gh-pages

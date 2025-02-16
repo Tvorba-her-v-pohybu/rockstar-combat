@@ -21,7 +21,6 @@ env:
   GODOT_VERSION: 4.3
   EXPORT_NAME: Rockstar # Change this to your game's name
   PROJECT_PATH: godot_project/  # Set to "." if your `project.godot` is in the root directory
-  EXPORT_DIR: .
 
 jobs:
   build:
@@ -42,15 +41,14 @@ jobs:
       - name: Web Build
         run: |
           mkdir -v -p build/web
-          EXPORT_DIR="$(readlink -f build)"
           cd $PROJECT_PATH
-          godot --headless --verbose --export-release "Web" "$EXPORT_DIR/web/index.html"
+          godot --headless --verbose --export-release "Web" "../build/web/index.html"
 
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: web/ # The folder the action should deploy.
+          folder: build/web/ # The folder the action should deploy.
           target-folder: web/
           clean: true
           token: ${{ secrets.GITHUB_TOKEN }}  # Use built-in token

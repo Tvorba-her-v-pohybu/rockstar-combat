@@ -264,3 +264,19 @@ scale = Vector2(3.975, 3.975)
 [node name="enemy" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
 position = Vector2(-671, -1764)
 target = NodePath("../hráč")
+
+[node name="enemy2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
+position = Vector2(-941, -2756)
+target = NodePath("../hráč")
+
+[node name="enemy3" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
+position = Vector2(-2278, -2997)
+target = NodePath("../hráč")
+
+[node name="enemy4" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
+position = Vector2(-3568, -4123)
+target = NodePath("../hráč")
+
+[node name="enemy5" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
+position = Vector2(-2701, -4218)
+target = NodePath("../hráč")

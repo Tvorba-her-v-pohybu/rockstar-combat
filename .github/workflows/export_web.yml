@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main  # Change this if needed
+  workflow_dispatch: # Allows manual triggers from GitHub Actions tab
+
+permissions:
+  contents: write  # needed to push to gh-pages
 
 env:
   GODOT_VERSION: 4.3
@@ -12,8 +16,9 @@ env:
   EXPORT_DIR: .
 
 jobs:
-  export:
+  export_and_deploy:
     runs-on: ubuntu-20.04
+
     container:
       image: barichello/godot-ci:4.3
 
@@ -36,5 +41,7 @@ jobs:
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          branch: main # The branch the action should deploy to.
+          branch: gh_pages # The branch the action should deploy to.
           folder: web/ # The folder the action should deploy.
+          clean: true
+          token: ${{ secrets.GITHUB_TOKEN }}  # Use built-in token

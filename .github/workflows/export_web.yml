@@ -51,6 +51,7 @@ jobs:
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: web/ # The folder the action should deploy.
+          target-folder: web/
           clean: true
           token: ${{ secrets.GITHUB_TOKEN }}  # Use built-in token
 

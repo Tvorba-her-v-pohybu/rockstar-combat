@@ -4,24 +4,36 @@ on:
   push:
     branches:
       - main  # Change this if needed
+  workflow_dispatch: # Allows manual triggers from GitHub Actions tab
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 env:
   GODOT_VERSION: 4.3
   EXPORT_NAME: Rockstar # Change this to your game's name
   PROJECT_PATH: godot_project/  # Set to "." if your `project.godot` is in the root directory
-  EXPORT_DIR: .
 
 jobs:
-  export:
+  build:
     runs-on: ubuntu-20.04
+
     container:
       image: barichello/godot-ci:4.3
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          lfs: true
+      #  with:
+      #    lfs: true
       - name: Setup
         run: |
           mkdir -v -p ~/.local/share/godot/export_templates/
@@ -29,12 +41,15 @@ jobs:
       - name: Web Build
         run: |
           mkdir -v -p build/web
-          EXPORT_DIR="$(readlink -f build)"
           cd $PROJECT_PATH
-          godot --headless --verbose --export-release "Web" "$EXPORT_DIR/web/index.html"
+          godot --headless --verbose --export-release "Web" "../build/web/index.html"
 
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: web/ # The folder the action should deploy.
+          folder: build/web/ # The folder the action should deploy.
+          target-folder: web/
+          clean: true
+          token: ${{ secrets.GITHUB_TOKEN }}  # Use built-in token
+

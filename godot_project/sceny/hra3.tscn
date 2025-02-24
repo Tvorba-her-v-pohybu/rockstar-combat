@@ -1,26 +1,26 @@
-[gd_scene load_steps=40 format=4 uid="uid://dmsgasc8d0duc"]
+[gd_scene load_steps=40 format=4 uid="uid://cb687h4ux8pos"]
 
-[ext_resource type="Texture2D" uid="uid://cygk1iwb53cny" path="res://Grafika/pixil-frame-0 (6).png" id="1_6pbdy"]
-[ext_resource type="Texture2D" uid="uid://toykiwtkfad6" path="res://Grafika/pixil-frame-0 (12).png" id="1_rkild"]
-[ext_resource type="Texture2D" uid="uid://b1vgssygpe5hq" path="res://Grafika/pixil-frame-0_13.png" id="1_udsrw"]
-[ext_resource type="Script" path="res://programy/program_postava.gd" id="2_b4c10"]
-[ext_resource type="Texture2D" uid="uid://c2ey2i2ireccj" path="res://Grafika/pixil-frame-0_9.png" id="2_qdrq0"]
-[ext_resource type="Texture2D" uid="uid://dgc8c07cvr6ry" path="res://Grafika/pixil-frame-0_10.png" id="3_b3rtn"]
-[ext_resource type="Texture2D" uid="uid://0qqwvkcvn3vk" path="res://Grafika/polaha_zelena.png" id="3_gvegx"]
-[ext_resource type="Texture2D" uid="uid://cbwxlve4orx03" path="res://Grafika/pixil-frame-0_x.png" id="4_d5kuh"]
-[ext_resource type="Texture2D" uid="uid://cbli04rmy6fiu" path="res://sceny/mgma 4 block.png" id="5_hakml"]
-[ext_resource type="Texture2D" uid="uid://dety6myduwtsv" path="res://Grafika/koberec.png" id="6_0av8q"]
-[ext_resource type="Texture2D" uid="uid://bbu0oudw61icv" path="res://Grafika/pixil-frame-0_3 (1).png" id="6_6lmwu"]
-[ext_resource type="Texture2D" uid="uid://d3ki6pa37p4v0" path="res://Grafika/torch_ds.png" id="6_dev0h"]
-[ext_resource type="AudioStream" uid="uid://jkl3dir84ca" path="res://Zvuky/chuze.wav" id="7_hvntm"]
-[ext_resource type="PackedScene" uid="uid://dwsvlk5l31wqe" path="res://sceny/projectile.tscn" id="7_hyr0j"]
-[ext_resource type="Texture2D" uid="uid://b33dlm8ohmox5" path="res://Grafika/kutka.png" id="8_p0s43"]
-[ext_resource type="AudioStream" uid="uid://cqvaavmls8lwy" path="res://Zvuky/SCAR 17 - Эта пушка решает!   Brandon Herrera на Русском Языке..mp3" id="12_5wqin"]
-[ext_resource type="Texture2D" uid="uid://dkod4yft8magy" path="res://Grafika/kocka_ad.png" id="12_x5eqh"]
-[ext_resource type="AudioStream" uid="uid://f2e20irl0exk" path="res://Zvuky/Scar Reload V2.mp3" id="13_hxask"]
-[ext_resource type="AudioStream" uid="uid://btt6w3mrnxcnq" path="res://Zvuky/umírání.mp3" id="15_hfom3"]
-[ext_resource type="PackedScene" uid="uid://detja68fditrv" path="res://sceny/enemy.tscn" id="17_myoxr"]
-[ext_resource type="Texture2D" uid="uid://b7mnotohptjrc" path="res://Grafika/srdce_fialove.png" id="18_g6mn0"]
+[ext_resource type="Texture2D" uid="uid://b7mnotohptjrc" path="res://Grafika/srdce_fialove.png" id="1_e827u"]
+[ext_resource type="Texture2D" uid="uid://toykiwtkfad6" path="res://Grafika/pixil-frame-0 (12).png" id="2_0n7if"]
+[ext_resource type="Texture2D" uid="uid://0qqwvkcvn3vk" path="res://Grafika/polaha_zelena.png" id="3_fww1q"]
+[ext_resource type="Texture2D" uid="uid://cygk1iwb53cny" path="res://Grafika/pixil-frame-0 (6).png" id="4_rh8wv"]
+[ext_resource type="Texture2D" uid="uid://cbli04rmy6fiu" path="res://sceny/mgma 4 block.png" id="5_afi0m"]
+[ext_resource type="Texture2D" uid="uid://c2ey2i2ireccj" path="res://Grafika/pixil-frame-0_9.png" id="6_ddvu2"]
+[ext_resource type="Texture2D" uid="uid://dgc8c07cvr6ry" path="res://Grafika/pixil-frame-0_10.png" id="7_rl3i5"]
+[ext_resource type="Texture2D" uid="uid://cbwxlve4orx03" path="res://Grafika/pixil-frame-0_x.png" id="8_bpwpc"]
+[ext_resource type="Texture2D" uid="uid://b1vgssygpe5hq" path="res://Grafika/pixil-frame-0_13.png" id="9_s7ghu"]
+[ext_resource type="Texture2D" uid="uid://d3ki6pa37p4v0" path="res://Grafika/torch_ds.png" id="10_qyhc7"]
+[ext_resource type="Texture2D" uid="uid://dety6myduwtsv" path="res://Grafika/koberec.png" id="11_fjqif"]
+[ext_resource type="Texture2D" uid="uid://b33dlm8ohmox5" path="res://Grafika/kutka.png" id="12_m3jtk"]
+[ext_resource type="Texture2D" uid="uid://dkod4yft8magy" path="res://Grafika/kocka_ad.png" id="13_q7dgr"]
+[ext_resource type="Script" path="res://programy/program_postava.gd" id="14_p4djg"]
+[ext_resource type="Texture2D" uid="uid://bbu0oudw61icv" path="res://Grafika/pixil-frame-0_3 (1).png" id="15_pcvra"]
+[ext_resource type="AudioStream" uid="uid://jkl3dir84ca" path="res://Zvuky/chuze.wav" id="16_asn6v"]
+[ext_resource type="AudioStream" uid="uid://cqvaavmls8lwy" path="res://Zvuky/SCAR 17 - Эта пушка решает!   Brandon Herrera на Русском Языке..mp3" id="17_ksie0"]
+[ext_resource type="AudioStream" uid="uid://f2e20irl0exk" path="res://Zvuky/Scar Reload V2.mp3" id="18_gchsw"]
+[ext_resource type="AudioStream" uid="uid://btt6w3mrnxcnq" path="res://Zvuky/umírání.mp3" id="19_qb47m"]
+[ext_resource type="PackedScene" uid="uid://dwsvlk5l31wqe" path="res://sceny/projectile.tscn" id="20_up4xb"]
+[ext_resource type="PackedScene" uid="uid://detja68fditrv" path="res://sceny/enemy.tscn" id="21_1037o"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_1n36l"]
 outlines = Array[PackedVector2Array]([PackedVector2Array(681, -2080, -585, -5044, -4694, -4946, -4030, 13, 1135, 214)])
@@ -29,12 +29,12 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(681, -2080, -585, -5044
 tile_data = PackedInt32Array(0, 3, 0, 65536, 3, 1, 1, 65539, 0, 65537, 65539, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d6t7q"]
-texture = ExtResource("3_gvegx")
+texture = ExtResource("3_fww1q")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ytf0u"]
-texture = ExtResource("1_6pbdy")
+texture = ExtResource("4_rh8wv")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 1:0/0 = 0
@@ -63,14 +63,13 @@ texture_region_size = Vector2i(80, 80)
 4:4/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jes6d"]
-load_path = "res://.godot/imported/magma 4 block.png-199e35145c2967b60f702643c117c8eb.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_agbpb"]
 texture = SubResource("CompressedTexture2D_jes6d")
 texture_region_size = Vector2i(80, 80)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1i268"]
-texture = ExtResource("5_hakml")
+texture = ExtResource("5_afi0m")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 1:0/0 = 0
@@ -78,19 +77,19 @@ texture_region_size = Vector2i(80, 80)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5qjri"]
-texture = ExtResource("2_qdrq0")
+texture = ExtResource("6_ddvu2")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, 10.0226, 40, 10.0226, -9.7442, -40, -9.85556)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e03qa"]
-texture = ExtResource("3_b3rtn")
+texture = ExtResource("7_rl3i5")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(40, -40, 40, -9.85662, 10.032, -9.92677, 10.1022, -40)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hsq77"]
-texture = ExtResource("4_d5kuh")
+texture = ExtResource("8_bpwpc")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(40, -40, 40, 40, 9.9375, 40, 10.0625, -40)
@@ -108,7 +107,7 @@ sources/3 = SubResource("TileSetAtlasSource_1i268")
 pattern_0 = SubResource("TileMapPattern_ibb61")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_smj6w"]
-texture = ExtResource("1_udsrw")
+texture = ExtResource("9_s7ghu")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -30.1662, 40, -30.3065, 40, 24.6942, -40, 24.8345)
@@ -138,23 +137,23 @@ texture_region_size = Vector2i(80, 80)
 4:4/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_34bxy"]
-texture = ExtResource("6_dev0h")
+texture = ExtResource("10_qyhc7")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h50om"]
-texture = ExtResource("6_0av8q")
+texture = ExtResource("11_fjqif")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ju706"]
-texture = ExtResource("8_p0s43")
+texture = ExtResource("12_m3jtk")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-15.368, -40, 14.9226, -40, 15.0339, 40, -15.368, 40)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rksqk"]
-texture = ExtResource("12_x5eqh")
+texture = ExtResource("13_q7dgr")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
 
@@ -178,17 +177,17 @@ height = 117.11
 [node name="SrdceFialove" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(5500, 250)
 scale = Vector2(7, 7)
-texture = ExtResource("18_g6mn0")
+texture = ExtResource("1_e827u")
 
 [node name="SrdceFialove2" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(5100, 250)
 scale = Vector2(7, 7)
-texture = ExtResource("18_g6mn0")
+texture = ExtResource("1_e827u")
 
 [node name="SrdceFialove3" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(4700, 250)
 scale = Vector2(7, 7)
-texture = ExtResource("18_g6mn0")
+texture = ExtResource("1_e827u")
 
 [node name="AmmoLabel" type="Label" parent="CanvasLayer"]
 unique_name_in_owner = true
@@ -219,7 +218,7 @@ text = "100"
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(287, 321)
 scale = Vector2(4.025, 4.025)
-texture = ExtResource("1_rkild")
+texture = ExtResource("2_0n7if")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_1n36l")
@@ -236,7 +235,7 @@ tile_set = SubResource("TileSet_3gewg")
 
 [node name="hráč" type="CharacterBody2D" parent="."]
 position = Vector2(-866, -277)
-script = ExtResource("2_b4c10")
+script = ExtResource("14_p4djg")
 
 [node name="Camera2D" type="Camera2D" parent="hráč"]
 position = Vector2(0, -15.065)
@@ -256,7 +255,7 @@ shape = SubResource("CapsuleShape2D_qtqgs")
 [node name="Pixil-frame-03(1)" type="Sprite2D" parent="hráč"]
 position = Vector2(0, 4)
 scale = Vector2(0.0966767, 0.0966767)
-texture = ExtResource("6_6lmwu")
+texture = ExtResource("15_pcvra")
 offset = Vector2(0, -348.56)
 region_enabled = true
 region_rect = Rect2(3464.96, 981.789, 662.659, 1439.69)
@@ -265,43 +264,43 @@ region_rect = Rect2(3464.96, 981.789, 662.659, 1439.69)
 position = Vector2(0, -100)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="hráč"]
-stream = ExtResource("7_hvntm")
+stream = ExtResource("16_asn6v")
 volume_db = -10.0
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="hráč"]
-stream = ExtResource("12_5wqin")
+stream = ExtResource("17_ksie0")
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="hráč"]
-stream = ExtResource("13_hxask")
+stream = ExtResource("18_gchsw")
 volume_db = -4.685
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="hráč"]
-stream = ExtResource("15_hfom3")
+stream = ExtResource("19_qb47m")
 
-[node name="projectile" parent="." instance=ExtResource("7_hyr0j")]
+[node name="projectile" parent="." instance=ExtResource("20_up4xb")]
 position = Vector2(2685, -446)
 scale = Vector2(3.975, 3.975)
 
-[node name="enemy" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
+[node name="enemy" parent="." node_paths=PackedStringArray("target") instance=ExtResource("21_1037o")]
 position = Vector2(-671, -1764)
 target = NodePath("../hráč")
 
-[node name="enemy6" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
+[node name="enemy6" parent="." node_paths=PackedStringArray("target") instance=ExtResource("21_1037o")]
 position = Vector2(100, -1747)
 target = NodePath("../hráč")
 
-[node name="enemy2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
+[node name="enemy2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("21_1037o")]
 position = Vector2(-941, -2756)
 target = NodePath("../hráč")
 
-[node name="enemy3" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
+[node name="enemy3" parent="." node_paths=PackedStringArray("target") instance=ExtResource("21_1037o")]
 position = Vector2(-2278, -2997)
 target = NodePath("../hráč")
 
-[node name="enemy4" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
+[node name="enemy4" parent="." node_paths=PackedStringArray("target") instance=ExtResource("21_1037o")]
 position = Vector2(-3568, -4123)
 target = NodePath("../hráč")
 
-[node name="enemy5" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
+[node name="enemy5" parent="." node_paths=PackedStringArray("target") instance=ExtResource("21_1037o")]
 position = Vector2(-2701, -4218)
 target = NodePath("../hráč")

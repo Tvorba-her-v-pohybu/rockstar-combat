@@ -1,20 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://detja68fditrv"]
+[gd_scene load_steps=7 format=3 uid="uid://b3iyt01vaqn80"]
 
-[ext_resource type="Script" path="res://sceny/area_2d.gd" id="1_2ks85"]
-[ext_resource type="Texture2D" uid="uid://bwj85unr5g8dq" path="res://Grafika/animace/had1.png" id="2_vvh51"]
-[ext_resource type="Texture2D" uid="uid://b3na0pk6xrpo8" path="res://Grafika/animace/had2.png" id="3_l64q5"]
+[ext_resource type="Script" path="res://sceny/area_2d.gd" id="1_5d335"]
+[ext_resource type="Texture2D" uid="uid://bwj85unr5g8dq" path="res://Grafika/animace/had1.png" id="2_om6mq"]
+[ext_resource type="Texture2D" uid="uid://dr5rgnq8srund" path="res://sceny/had_lava.webp" id="3_rqrw5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hr7al"]
-size = Vector2(84.1963, 71.9911)
+size = Vector2(17.7596, 71.9911)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1ny0k"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_l64q5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_l64q5")
+"texture": ExtResource("3_rqrw5")
 }],
 "loop": true,
 "name": &"attack",
@@ -22,29 +19,33 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_vvh51")
+"texture": ExtResource("3_rqrw5")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_cl4e6"]
-radius = 655.891
+[sub_resource type="CircleShape2D" id="CircleShape2D_yomav"]
+radius = 127.143
 
-[node name="enemy" type="Area2D" groups=["enemy"]]
+[node name="enemy_had" type="Area2D" groups=["enemy"]]
 scale = Vector2(1.113, 1.113)
-script = ExtResource("1_2ks85")
+script = ExtResource("1_5d335")
+SPEED = 4.0
+ACCEL = 6.0
+HP = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["enemy"]]
 visible = false
 rotation = 1.5708
 scale = Vector2(1.113, 1.113)
-texture = ExtResource("2_vvh51")
+texture = ExtResource("2_om6mq")
 region_enabled = true
 region_rect = Rect2(262.594, 275.243, 86.3967, 73.6037)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.25246e-06, -0.898469)
 rotation = 1.5708
 scale = Vector2(1.113, 1.113)
 shape = SubResource("RectangleShape2D_hr7al")
@@ -52,10 +53,11 @@ shape = SubResource("RectangleShape2D_hr7al")
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(14.3756, -6.28931)
+position = Vector2(-8.98473, 14.3756)
 rotation = 1.5708
-scale = Vector2(1.13934, 1.13934)
+scale = Vector2(1.77726, 1.77726)
 sprite_frames = SubResource("SpriteFrames_1ny0k")
+animation = &"attack"
 
 [node name="AttackTimer" type="Timer" parent="."]
 unique_name_in_owner = true
@@ -80,7 +82,8 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WakeUpArea"]
-shape = SubResource("CircleShape2D_cl4e6")
+shape = SubResource("CircleShape2D_yomav")
 
 [connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
+[connection signal="body_entered" from="WakeUpArea" to="." method="_on_wake_up_area_body_entered"]

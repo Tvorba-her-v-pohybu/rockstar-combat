@@ -12,10 +12,15 @@ var velocity := Vector2(0, 0)
 
 @onready var navigation : NavigationAgent2D = $NavigationAgent2D
 
+var sleeping := true
+
 func _ready() -> void:
 	$DemageTreckerLabel.text = ""
 
 func _physics_process(delta: float) -> void:
+	if sleeping:
+		return
+	
 	navigation.target_position = target.global_position
 
 	var next_pos = navigation.get_next_path_position()
@@ -42,6 +47,7 @@ func _physics_process(delta: float) -> void:
 
 
 func on_hit(damage):
+	sleeping = false
 	HP = HP - damage
 	if HP <= 0:
 		queue_free()
@@ -63,3 +69,8 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 func _on_animated_sprite_2d_animation_looped() -> void:
 	if $AnimatedSprite2D.animation == "attack":
 		$AnimatedSprite2D.play("default")
+
+
+func _on_wake_up_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		sleeping = false

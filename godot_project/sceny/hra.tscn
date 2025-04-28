@@ -222,3 +222,15 @@ target = NodePath("../hráč")
 [node name="enemy5" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
 position = Vector2(-2701, -4218)
 target = NodePath("../hráč")
+
+[node name="enemy7" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
+position = Vector2(167, -723)
+target = NodePath("../hráč")
+
+[node name="enemy8" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
+position = Vector2(-2816, -2309)
+target = NodePath("../hráč")
+
+[node name="enemy9" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
+position = Vector2(-3654, -2739)
+target = NodePath("../hráč")

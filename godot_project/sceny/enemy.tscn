@@ -84,3 +84,4 @@ shape = SubResource("CircleShape2D_cl4e6")
 
 [connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
+[connection signal="body_entered" from="WakeUpArea" to="." method="_on_wake_up_area_body_entered"]

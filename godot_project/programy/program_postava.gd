@@ -57,7 +57,7 @@ func _physics_process(delta: float) -> void:
 			$AudioStreamPlayer.play()
 	else:
 		$AudioStreamPlayer.stop()
-	if hp == 0:
+	if hp < 1:
 		hp = 100
 		show_hp()
 		$AudioStreamPlayer4.play()

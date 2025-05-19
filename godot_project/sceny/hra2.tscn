@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bbu0oudw61icv" path="res://Grafika/pixil-frame-0_3 (1).png" id="14_lxbw2"]
 [ext_resource type="AudioStream" uid="uid://jkl3dir84ca" path="res://Zvuky/chuze.wav" id="15_84jvl"]
 [ext_resource type="AudioStream" uid="uid://cqvaavmls8lwy" path="res://Zvuky/SCAR 17 - Эта пушка решает!   Brandon Herrera на Русском Языке..mp3" id="16_bijmf"]
-[ext_resource type="PackedScene" path="res://sceny/enemy_had.tscn" id="16_m35wc"]
+[ext_resource type="PackedScene" uid="uid://b3iyt01vaqn80" path="res://sceny/enemy_had.tscn" id="16_m35wc"]
 [ext_resource type="AudioStream" uid="uid://f2e20irl0exk" path="res://Zvuky/Scar Reload V2.mp3" id="17_u255b"]
 [ext_resource type="AudioStream" uid="uid://btt6w3mrnxcnq" path="res://Zvuky/umírání.mp3" id="18_nao3b"]
 [ext_resource type="PackedScene" uid="uid://dwsvlk5l31wqe" path="res://sceny/projectile.tscn" id="19_gib26"]

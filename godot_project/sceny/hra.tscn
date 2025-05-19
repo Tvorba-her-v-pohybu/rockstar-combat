@@ -203,25 +203,37 @@ position = Vector2(2685, -446)
 scale = Vector2(3.975, 3.975)
 
 [node name="enemy" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
-position = Vector2(-671, -1764)
-target = NodePath("../hrac")
-
-[node name="enemy6" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
-position = Vector2(170, -605)
+position = Vector2(-903, -1740)
 target = NodePath("../hrac")
 
 [node name="enemy2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
-position = Vector2(-941, -2756)
+position = Vector2(-2335, -4212)
 target = NodePath("../hrac")
 
 [node name="enemy3" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
-position = Vector2(-2278, -2997)
+position = Vector2(-2695, -2396)
 target = NodePath("../hrac")
 
 [node name="enemy4" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
-position = Vector2(-3568, -4123)
+position = Vector2(-2287, -3004)
 target = NodePath("../hrac")
 
 [node name="enemy5" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
-position = Vector2(-2701, -4218)
+position = Vector2(-887, -2972)
+target = NodePath("../hrac")
+
+[node name="enemy6" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
+position = Vector2(145, -1724)
+target = NodePath("../hrac")
+
+[node name="enemy7" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
+position = Vector2(73.0001, -724)
+target = NodePath("../hrac")
+
+[node name="enemy8" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
+position = Vector2(-3543, -4044)
+target = NodePath("../hrac")
+
+[node name="enemy9" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
+position = Vector2(-3623, -2780)
 target = NodePath("../hrac")

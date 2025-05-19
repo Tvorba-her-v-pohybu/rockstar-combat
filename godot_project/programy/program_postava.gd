@@ -10,7 +10,7 @@ signal smrt
 @export var strelba := false
 @export var hp := 100
 @export var zivoty := 3
-@export var naboje = tricet * 10
+@export var naboje = tricet * 8
 
 var start_position : Vector2
 
@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y += 1
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1
-	if Input.is_action_just_pressed("mouse_left") && ammo > 0 && reloading == false && strelba == false:
+	if Input.is_action_pressed("mouse_left") && ammo > 0 && reloading == false && strelba == false:
 		strelba = true
 		_shoot()
 		$AudioStreamPlayer2.play()

@@ -45,7 +45,7 @@ func _physics_process(delta: float) -> void:
 		show_ammo()
 		await get_tree().create_timer(0.2).timeout
 		strelba = false
-	if Input.is_action_just_pressed("R_key"):
+	if Input.is_action_just_pressed("R_key") && naboje > 0:
 		reloading = true
 		naboje = naboje - tricet
 		ammo = 0

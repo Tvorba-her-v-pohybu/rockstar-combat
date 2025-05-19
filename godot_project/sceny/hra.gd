@@ -8,11 +8,11 @@ func _ready() -> void:
 func _schovej_srdce(zivoty):
 	match zivoty:
 		2:
-			$CanvasLayer/SrdceFialove.visible = false
+			$CanvasLayer/SrdceFialove3.visible = false
 		1:
 			$CanvasLayer/SrdceFialove2.visible = false
 		0:
-			$CanvasLayer/SrdceFialove3.visible = false
+			$CanvasLayer/SrdceFialove.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

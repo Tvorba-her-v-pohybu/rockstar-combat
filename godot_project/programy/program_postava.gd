@@ -10,6 +10,7 @@ signal smrt
 @export var strelba := false
 @export var hp := 100
 @export var zivoty := 3
+@export var naboje = tricet * 10
 
 var start_position : Vector2
 
@@ -46,6 +47,7 @@ func _physics_process(delta: float) -> void:
 		strelba = false
 	if Input.is_action_just_pressed("R_key"):
 		reloading = true
+		naboje = naboje - tricet
 		ammo = 0
 		show_ammo()
 		$AudioStreamPlayer3.play()
@@ -70,10 +72,12 @@ func _physics_process(delta: float) -> void:
 		show_hp()
 		$AudioStreamPlayer4.play()
 		global_position = start_position
+		naboje = naboje - 20
+		show_ammo()
 	move_and_slide()
 
 func show_ammo():
-	%AmmoLabel.text = str(ammo) + " / " + str(tricet) + " "
+	%AmmoLabel.text = str(ammo) + " / " + str(naboje) + " "
 	
 func on_hit(damage):
 	hp = hp - damage
@@ -81,7 +85,6 @@ func on_hit(damage):
 	
 func show_hp():
 	%HPLabel.text = str(hp)
-# Tahle funkce provede strileni
 func _shoot():
 	var projectile := projectile_scene.instantiate()
 	projectile.global_position = $Node2D.global_position

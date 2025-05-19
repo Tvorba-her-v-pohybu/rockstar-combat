@@ -1,5 +1,6 @@
 class_name Player extends CharacterBody2D
 
+signal smrt
 
 @export var tricet := 30
 
@@ -8,6 +9,7 @@ class_name Player extends CharacterBody2D
 @export var reloading := false
 @export var strelba := false
 @export var hp := 100
+@export var zivoty := 3
 
 var projectile_scene := preload("res://sceny/projectile.tscn")
 
@@ -38,7 +40,7 @@ func _physics_process(delta: float) -> void:
 		show_ammo()
 		await get_tree().create_timer(0.2).timeout
 		strelba = false
-	if Input.is_action_just_pressed("R_key") && ammo < tricet:
+	if Input.is_action_just_pressed("R_key"):
 		reloading = true
 		ammo = 0
 		show_ammo()
@@ -58,6 +60,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		$AudioStreamPlayer.stop()
 	if hp < 1:
+		zivoty = zivoty - 1
+		smrt.emit(zivoty)
 		hp = 100
 		show_hp()
 		$AudioStreamPlayer4.play()

@@ -11,9 +11,13 @@ signal smrt
 @export var hp := 100
 @export var zivoty := 3
 
+var start_position : Vector2
+
 var projectile_scene := preload("res://sceny/projectile.tscn")
 
 func _ready() -> void:
+	start_position = global_position
+	
 	GameManager.player = self
 	show_ammo()
 	show_hp()
@@ -65,8 +69,7 @@ func _physics_process(delta: float) -> void:
 		hp = 100
 		show_hp()
 		$AudioStreamPlayer4.play()
-	
-	
+		global_position = start_position
 	move_and_slide()
 
 func show_ammo():

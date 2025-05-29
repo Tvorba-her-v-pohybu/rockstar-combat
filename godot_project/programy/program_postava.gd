@@ -26,7 +26,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	look_at(get_global_mouse_position())
 	rotation += PI/2
-	
+	if global_position.
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
@@ -45,7 +45,7 @@ func _physics_process(delta: float) -> void:
 		show_ammo()
 		await get_tree().create_timer(0.2).timeout
 		strelba = false
-	if Input.is_action_just_pressed("mouse_left") &&naboje > 0 || Input.is_action_just_pressed("R_key") && naboje > 0:
+	if Input.is_action_just_pressed("R_key") && naboje > 0:
 		reloading = true
 		naboje = naboje - tricet
 		ammo = 0

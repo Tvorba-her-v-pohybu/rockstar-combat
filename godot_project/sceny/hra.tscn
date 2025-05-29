@@ -157,6 +157,12 @@ position = Vector2(-866, -277)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("2_b4c10")
+tricet = null
+speed = null
+reloading = null
+strelba = null
+hp = null
+zivoty = null
 
 [node name="Camera2D" type="Camera2D" parent="hrac"]
 position = Vector2(0, -15.065)
@@ -207,7 +213,7 @@ position = Vector2(-903, -1740)
 target = NodePath("../hrac")
 
 [node name="enemy2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]
-position = Vector2(-2335, -4212)
+position = Vector2(-2435, -4206)
 target = NodePath("../hrac")
 
 [node name="enemy3" parent="." node_paths=PackedStringArray("target") instance=ExtResource("17_myoxr")]

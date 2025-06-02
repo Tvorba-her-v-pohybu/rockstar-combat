@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://wbcjxfrk5tqt"]
+
+[ext_resource type="Script" path="res://sceny/button.gd" id="1_5h3ec"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 2243.0
+offset_top = 1242.0
+offset_right = 3623.0
+offset_bottom = 1807.0
+theme_override_font_sizes/font_size = 400
+text = "Play"
+script = ExtResource("1_5h3ec")

@@ -52,11 +52,13 @@ texture_region_size = Vector2i(80, 80)
 texture = ExtResource("3_v8wq0")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(10.25, -40, 40, -40, 40, -9.5, 10, -9.75)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqfax"]
 texture = ExtResource("4_ptg2o")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(9.75, -40, 10, 40, 40, 40, 40, -40)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jes6d"]
 
@@ -99,6 +101,7 @@ texture_region_size = Vector2i(80, 80)
 texture = ExtResource("9_ajqs3")
 texture_region_size = Vector2i(80, 80)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -9.25, 9.75, -9.5, 9.75, 40, 40, 40, 40, -40, -40, -40)
 
 [resource]
 tile_size = Vector2i(80, 80)

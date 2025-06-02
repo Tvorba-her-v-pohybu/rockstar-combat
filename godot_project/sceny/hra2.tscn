@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://bnfwq1vbvmho0"]
+[gd_scene load_steps=28 format=4 uid="uid://bnfwq1vbvmho0"]
 
 [ext_resource type="Texture2D" uid="uid://b7mnotohptjrc" path="res://Grafika/srdce_fialove.png" id="1_32343"]
 [ext_resource type="Texture2D" uid="uid://toykiwtkfad6" path="res://Grafika/pixil-frame-0 (12).png" id="2_yfq4t"]
@@ -15,7 +15,9 @@
 [ext_resource type="AudioStream" uid="uid://cqvaavmls8lwy" path="res://Zvuky/SCAR 17 - Эта пушка решает!   Brandon Herrera на Русском Языке..mp3" id="16_bijmf"]
 [ext_resource type="PackedScene" uid="uid://b3iyt01vaqn80" path="res://sceny/enemy_had.tscn" id="16_m35wc"]
 [ext_resource type="AudioStream" uid="uid://f2e20irl0exk" path="res://Zvuky/Scar Reload V2.mp3" id="17_u255b"]
+[ext_resource type="PackedScene" uid="uid://cok4mi1s7ev1s" path="res://sceny/level_finish.tscn" id="18_jufsj"]
 [ext_resource type="AudioStream" uid="uid://btt6w3mrnxcnq" path="res://Zvuky/umírání.mp3" id="18_nao3b"]
+[ext_resource type="PackedScene" uid="uid://cb687h4ux8pos" path="res://sceny/hra3.tscn" id="19_8dqtm"]
 [ext_resource type="PackedScene" uid="uid://dwsvlk5l31wqe" path="res://sceny/projectile.tscn" id="19_gib26"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_1n36l"]
@@ -574,3 +576,7 @@ target = NodePath("../hráč")
 [node name="enemy_had27" parent="." node_paths=PackedStringArray("target") instance=ExtResource("16_m35wc")]
 position = Vector2(-2774, -2421)
 target = NodePath("../hráč")
+
+[node name="LevelFinish" parent="." instance=ExtResource("18_jufsj")]
+position = Vector2(1396, -4915)
+next_scene = ExtResource("19_8dqtm")

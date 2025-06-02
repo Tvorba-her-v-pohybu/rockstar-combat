@@ -26,7 +26,6 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	look_at(get_global_mouse_position())
 	rotation += PI/2
-	if global_position.
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cok4mi1s7ev1s"]
+
+[ext_resource type="Script" path="res://sceny/level_finish.gd" id="1_qkbil"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s6brf"]
+radius = 177.045
+
+[node name="LevelFinish" type="Area2D"]
+position = Vector2(-1957, -4208)
+script = ExtResource("1_qkbil")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_s6brf")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
